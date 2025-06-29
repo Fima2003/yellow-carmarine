@@ -194,7 +194,15 @@ img {
 @media (min-width: 1200px) {
   /* Large desktop styles */
   .dashboard-container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    max-width: none !important;
+  }
+  
+  .dashboard-container > div {
     max-width: 1000px !important;
+    width: 100% !important;
   }
   
   .login-container {
