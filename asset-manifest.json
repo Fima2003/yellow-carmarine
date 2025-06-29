@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/yellow-carmarine/static/css/main.af277979.css",
+    "main.js": "/yellow-carmarine/static/js/main.b9286eb1.js",
+    "static/media/martha.jpg": "/yellow-carmarine/static/media/martha.6fab04f80e4e7f980989.jpg",
+    "static/media/fima.jpeg": "/yellow-carmarine/static/media/fima.8a311c09c1e02e1b7959.jpeg",
+    "index.html": "/yellow-carmarine/index.html",
+    "main.af277979.css.map": "/yellow-carmarine/static/css/main.af277979.css.map",
+    "main.b9286eb1.js.map": "/yellow-carmarine/static/js/main.b9286eb1.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.af277979.css",
+    "static/js/main.b9286eb1.js"
+  ]
+}
