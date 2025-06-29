@@ -9,12 +9,12 @@ const Dashboard = ({ username }: { username: string }) => {
   );
 
   const fetchScores = async () => {
-    const res = await axios.get("http://localhost:3001/scores");
+    const res = await axios.get("https://yellow-carmarine-18fbdf3f6226.herokuapp.com/scores");
     setScores(res.data);
   };
 
   const increment = async () => {
-    await axios.post("http://localhost:3001/scores/increment", {
+    await axios.post("https://yellow-carmarine-18fbdf3f6226.herokuapp.com/scores/increment", {
       username,
     });
     fetchScores();
