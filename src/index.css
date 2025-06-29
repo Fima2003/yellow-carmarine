@@ -1,13 +1,211 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  min-height: 100vh;
+  color: #333;
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Animations */
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-10px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes flipHorizontal {
+  0%, 49% {
+    transform: scaleX(1);
+  }
+  50%, 100% {
+    transform: scaleX(-1);
+  }
+}
+
+/* Apply flip animation to all images */
+img {
+  animation: flipHorizontal 1s infinite steps(1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  /* Mobile styles */
+  body {
+    font-size: 14px;
+  }
+  
+  /* Login page mobile adjustments */
+  .login-container {
+    padding: 30px 20px !important;
+    margin: 10px !important;
+  }
+  
+  .login-title {
+    font-size: 2rem !important;
+  }
+  
+  .user-selection {
+    flex-direction: column !important;
+    gap: 20px !important;
+  }
+  
+  .user-card {
+    min-width: auto !important;
+    width: 100% !important;
+    max-width: 200px !important;
+    margin: 0 auto !important;
+  }
+  
+  .user-avatar {
+    width: 80px !important;
+    height: 80px !important;
+  }
+  
+  /* Dashboard mobile adjustments */
+  .dashboard-container {
+    padding: 15px !important;
+  }
+  
+  .dashboard-header {
+    padding: 30px 20px !important;
+  }
+  
+  .dashboard-title {
+    font-size: 2.2rem !important;
+  }
+  
+  .dashboard-subtitle {
+    font-size: 1.2rem !important;
+  }
+  
+  /* Counter button mobile */
+  .counter-button {
+    font-size: 1.4rem !important;
+    padding: 15px 30px !important;
+  }
+  
+  /* Scoreboard mobile */
+  .scoreboard-container {
+    padding: 20px !important;
+    margin: 20px 10px !important;
+  }
+  
+  .players-container {
+    flex-direction: column !important;
+    gap: 20px !important;
+    align-items: center !important;
+  }
+  
+  .player-card {
+    min-width: auto !important;
+    width: 100% !important;
+    max-width: 250px !important;
+  }
+  
+  .player-avatar {
+    width: 70px !important;
+    height: 70px !important;
+  }
+  
+  .player-score {
+    font-size: 2rem !important;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Extra small mobile styles */
+  .login-container {
+    padding: 25px 15px !important;
+  }
+  
+  .login-title {
+    font-size: 1.8rem !important;
+  }
+  
+  .dashboard-title {
+    font-size: 1.8rem !important;
+  }
+  
+  .dashboard-subtitle {
+    font-size: 1rem !important;
+  }
+  
+  .counter-button {
+    font-size: 1.2rem !important;
+    padding: 12px 25px !important;
+  }
+  
+  .player-card {
+    padding: 15px !important;
+  }
+  
+  .player-avatar {
+    width: 60px !important;
+    height: 60px !important;
+  }
+  
+  .player-score {
+    font-size: 1.8rem !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  /* Large desktop styles */
+  .dashboard-container {
+    max-width: 1000px !important;
+  }
+  
+  .login-container {
+    max-width: 600px !important;
+  }
+  
+  .players-container {
+    gap: 50px !important;
+  }
+  
+  .user-selection {
+    gap: 40px !important;
+  }
 }
